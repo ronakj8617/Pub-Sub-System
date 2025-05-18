@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -e  # Exit immediately on error
+
+echo "🧹 Cleaning previous CMake cache and build files..."
+rm -rf CMakeCache.txt CMakeFiles Makefile cmake_install.cmake build
+
+echo "📁 Creating build directory..."
+mkdir -p build
+cd build
+
+echo "⚙️  Running CMake..."
+if ! cmake .. -DBOOST_ROOT=/opt/homebrew/opt/boost; then
+    echo "❌ CMake configuration failed!"
+    exit 1
+fi
+
+echo "🔨 Building project..."
+if ! make; then
+    echo "❌ Build failed!"
+    exit 1
+fi
+
+if [ ! -f ./pubsub ]; then
+  echo "❌ Build succeeded but pubsub binary not found!"
+  exit 1
+fi
+
+echo "🚀 Running Pub-Sub server..."
+./pubsub

@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/pubsub.dir/src/main.cpp.o CMakeFiles/pubsub.dir/src/TopicManager.cpp.o -o pubsub  /opt/homebrew/Cellar/boost/1.88.0/lib/libboost_system.dylib /opt/homebrew/Cellar/boost/1.88.0/lib/libboost_thread.dylib
