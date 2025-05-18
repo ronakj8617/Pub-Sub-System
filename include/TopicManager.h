@@ -19,7 +19,7 @@ private:
     mutex mtx;
 
 public:
-    void publish(string &topicId, string &message);
-    void subscribe(string &topicId, string &subscriberId);
-    vector<string> getMessage(string &subscriberId);
+    void publish(string topicId, string message);
+    void subscribe(string topicId, string subscriberId);
+    vector<string> getMessage(string subscriberId);
 };
