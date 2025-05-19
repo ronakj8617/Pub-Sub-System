@@ -1,34 +1,33 @@
 //
 // Created by Ronak on 18/05/25.
 //
-
-#include<iostream>
 #include "./../include/TopicManager.h"
 
-
-using namespace std;
-
-void TopicManager::publish(string topicId, string message) {
-    lock_guard<mutex> lock(mtx);
-
-    for (const auto subscriber: subscribers[topicId]) {
-        messageQueue[subscriber].push(message);
-    }
-}
-
-void TopicManager::subscribe(string topicId, string subscriberId) {
-    lock_guard<mutex> lock(mtx);
+void TopicManager::subscribe(const std::string& topicId, const std::string& subscriberId) {
+    std::lock_guard<std::mutex> lock(mtx);
     subscribers[topicId].push_back(subscriberId);
 }
 
-vector<string> TopicManager::getMessage(string subscriberId) {
-    lock_guard<mutex> lock(mtx);
-
-    vector<string> messages;
-    auto queue = messageQueue[subscriberId];
-    while (!queue.empty()) {
-        messages.push_back(queue.front());
-        queue.pop();
+void TopicManager::publish(const std::string& topicId, const std::string& message) {
+    std::lock_guard<std::mutex> lock(mtx);
+    for (const auto& sub : subscribers[topicId]) {
+        messages[sub].push_back(message);
+        conds[sub].notify_all();
     }
-    return messages;
+}
+
+std::vector<std::string> TopicManager::getMessage(const std::string& subscriberId) {
+    std::lock_guard<std::mutex> lock(mtx);
+    auto msgs = messages[subscriberId];
+    messages[subscriberId].clear();  // Clear after fetching
+    return msgs;
+}
+
+void TopicManager::waitForMessages(const std::string& subscriberId, std::vector<std::string>& out) {
+    std::unique_lock<std::mutex> lock(mtx);
+    conds[subscriberId].wait(lock, [&] {
+        return !messages[subscriberId].empty();
+    });
+    out = std::move(messages[subscriberId]);
+    messages[subscriberId].clear();
 }

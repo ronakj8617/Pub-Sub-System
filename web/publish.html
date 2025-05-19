@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Publisher</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { margin: 5px; }
+  </style>
+</head>
+<body>
+<h2>📤 Publish Message</h2>
+<label>Topic ID: <input id="topicId" type="text" /></label><br>
+<label>Message: <input id="message" type="text" /></label><br>
+<button onclick="publish()">Publish</button>
+
+<p id="status"></p>
+
+<script>
+  async function publish() {
+    const topicId = document.getElementById('topicId').value;
+    const message = document.getElementById('message').value;
+
+    const res = await fetch('http://localhost:8080/publish', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ topicId, message })
+    });
+
+    const data = await res.json();
+    document.getElementById('status').textContent = data.message || data.error;
+  }
+</script>
+</body>
+</html>

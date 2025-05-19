@@ -1,41 +1,29 @@
-//
-// Created by Ronak on 17/05/25.
-//
-
 #define CROW_MAIN
 #include <crow.h>
 #include "nlohmann/json.hpp"
 #include "./../include/TopicManager.h"
+#include "./../include/cors.h"
+#include "crow/app.h"
+
 
 using json = nlohmann::json;
-mutex mtx2;
-
-void fetchMsg(string subscriberId, TopicManager &manager, mutex &mtx2) {
-    while (true)
-        {
-        lock_guard<mutex> lock(mtx2);
-        auto messages = manager.getMessage(subscriberId);
-
-        for (auto &msg: messages)
-            cout << msg << endl;
-
-        cout << "-------------------------------" << endl;
-        this_thread::sleep_for(chrono::seconds(3));
-    }
-}
 
 int main() {
-    crow::SimpleApp app;
+    crow::App<CORS> app; // CORS middleware added
     TopicManager manager;
-    thread t1(fetchMsg, "123", ref(manager), ref(mtx2));
 
-    CROW_ROUTE(app, "/ping")
-    ([] {
-        return crow::response(200, json({{"message", "pong"}, {"status", "ok"}}).dump());
+    CROW_ROUTE(app, "/ping").methods("GET"_method, "OPTIONS"_method)
+    ([](const crow::request& req) {
+        if (req.method == "OPTIONS"_method)
+            return crow::response(204); // Preflight
+        return crow::response(200, json({{"message", "pong"}}).dump());
     });
 
-    CROW_ROUTE(app, "/subscribe").methods(crow::HTTPMethod::POST)
+    CROW_ROUTE(app, "/subscribe").methods("POST"_method, "OPTIONS"_method)
     ([&manager](const crow::request &req) {
+        if (req.method == "OPTIONS"_method)
+            return crow::response(204); // Preflight
+
         try {
             auto body = json::parse(req.body);
             std::string topicId = body["topicId"];
@@ -47,8 +35,11 @@ int main() {
         }
     });
 
-    CROW_ROUTE(app, "/publish").methods(crow::HTTPMethod::POST)
+    CROW_ROUTE(app, "/publish").methods("POST"_method, "OPTIONS"_method)
     ([&manager](const crow::request &req) {
+        if (req.method == "OPTIONS"_method)
+            return crow::response(204); // Preflight
+
         try {
             auto body = json::parse(req.body);
             std::string topicId = body["topicId"];
@@ -60,20 +51,15 @@ int main() {
         }
     });
 
-    CROW_ROUTE(app, "/messages/<string>")
-    ([&manager](const std::string &subscriberId) {
+    CROW_ROUTE(app, "/messages/<string>").methods("GET"_method, "OPTIONS"_method)
+    ([&manager](const crow::request& req, const std::string &subscriberId) {
+        if (req.method == "OPTIONS"_method)
+            return crow::response(204); // Preflight
+
         auto messages = manager.getMessage(subscriberId);
         return crow::response(200, json(messages).dump());
     });
 
-    std::cout << "🚀 Pub-Sub Server running at http://localhost:8080\n";
-    std::cout << "✅ Endpoints:\n";
-    std::cout << "   - GET    /ping\n";
-    std::cout << "   - POST   /subscribe  {topicId, subscriberId}\n";
-    std::cout << "   - POST   /publish    {topicId, message}\n";
-    std::cout << "   - GET    /messages/{subscriberId}\n\n";
-    t1.detach();
+    std::cout << "✅ Pub-Sub Server running on http://localhost:8080\n";
     app.port(8080).multithreaded().run();
-
-    return 0;
 }

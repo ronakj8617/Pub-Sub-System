@@ -19,7 +19,8 @@ find_package(Boost REQUIRED COMPONENTS system thread)
 
 add_subdirectory(external/crow)
 
-add_executable(pubsub src/main.cpp src/TopicManager.cpp)
+add_executable(pubsub src/main.cpp src/TopicManager.cpp
+        include/cors.h)
 
 target_include_directories(pubsub PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/external/crow/include

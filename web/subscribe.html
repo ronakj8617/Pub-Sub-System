@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subscriber</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { margin: 5px; }
+  </style>
+</head>
+<body>
+<h2>📥 Subscribe to Topic</h2>
+<label>Topic ID: <input id="topicId" type="text" /></label><br>
+<label>Subscriber ID: <input id="subscriberId" type="text" /></label><br>
+<button onclick="subscribe()">Subscribe</button>
+
+<h3>Messages:</h3>
+<ul id="messages"></ul>
+
+<script>
+  let subscriberId = "";
+
+  async function subscribe() {
+    const topicId = document.getElementById('topicId').value;
+    subscriberId = document.getElementById('subscriberId').value;
+
+    const res = await fetch('http://localhost:8080/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ topicId, subscriberId })
+    });
+
+    const data = await res.json();
+    alert(data.message || data.error);
+
+    // Start polling
+    setInterval(fetchMessages, 1000);
+  }
+
+  async function fetchMessages() {
+    if (!subscriberId) return;
+
+    const res = await fetch(`http://localhost:8080/messages/${subscriberId}`);
+    const msgs = await res.json();
+    const list = document.getElementById('messages');
+    list.innerHTML = "";
+    msgs.forEach(msg => {
+      const li = document.createElement("li");
+      li.textContent = msg;
+      list.appendChild(li);
+    });
+  }
+</script>
+</body>
+</html>
