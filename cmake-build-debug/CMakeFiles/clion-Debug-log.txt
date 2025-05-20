@@ -32,6 +32,6 @@ CMake Warning (dev) at external/crow/CMakeLists.txt:78 (find_package):
   .cmake module might still use it.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- Configuring done (0.9s)
+-- Configuring done (0.7s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug

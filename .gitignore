@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+SSH_KEY
+SSH_KEY.pub

@@ -111,8 +111,8 @@ pubsub_EXTERNAL_OBJECTS =
 pubsub: CMakeFiles/pubsub.dir/src/main.cpp.o
 pubsub: CMakeFiles/pubsub.dir/src/TopicManager.cpp.o
 pubsub: CMakeFiles/pubsub.dir/build.make
-pubsub: /opt/homebrew/Cellar/boost/1.88.0/lib/libboost_system.dylib
-pubsub: /opt/homebrew/Cellar/boost/1.88.0/lib/libboost_thread.dylib
+pubsub: /opt/homebrew/lib/libboost_system.dylib
+pubsub: /opt/homebrew/lib/libboost_thread.dylib
 pubsub: CMakeFiles/pubsub.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable pubsub"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pubsub.dir/link.txt --verbose=$(VERBOSE)

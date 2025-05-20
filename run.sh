@@ -10,10 +10,7 @@ mkdir -p build
 cd build
 
 echo "⚙️  Running CMake..."
-if ! cmake .. -DBOOST_ROOT=/opt/homebrew/opt/boost; then
-    echo "❌ CMake configuration failed!"
-    exit 1
-fi
+cmake ..
 
 echo "🔨 Building project..."
 if ! make; then
