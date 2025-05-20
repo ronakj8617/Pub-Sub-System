@@ -25,3 +25,4 @@ fi
 
 echo "🚀 Running Pub-Sub server..."
 ./pubsub
+
