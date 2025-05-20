@@ -26,6 +26,7 @@
       body: JSON.stringify({ topicId, message })
     });
 
+    console.log(res)
     const data = await res.json();
     document.getElementById('status').textContent = data.message || data.error;
   }

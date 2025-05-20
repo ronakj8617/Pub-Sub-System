@@ -19,7 +19,7 @@ void TopicManager::publish(const std::string& topicId, const std::string& messag
 std::vector<std::string> TopicManager::getMessage(const std::string& subscriberId) {
     std::lock_guard<std::mutex> lock(mtx);
     auto msgs = messages[subscriberId];
-    messages[subscriberId].clear();  // Clear after fetching
+    messages[subscriberId].clear();
     return msgs;
 }
 
