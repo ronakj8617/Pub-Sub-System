@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/unittest.dir/unittest.cpp.o -o unittest  /opt/homebrew/lib/libboost_system.dylib /opt/homebrew/lib/libboost_thread.dylib -lz
