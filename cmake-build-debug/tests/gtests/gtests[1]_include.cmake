@@ -1,0 +1,5 @@
+if(EXISTS "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests/gtests[1]_tests.cmake")
+  include("/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests/gtests[1]_tests.cmake")
+else()
+  add_test(gtests_NOT_BUILT gtests_NOT_BUILT)
+endif()

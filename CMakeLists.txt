@@ -11,11 +11,34 @@ set(CROW_ENABLE_COMPRESSION OFF)
 set(CROW_USE_SSL OFF)
 set(CROW_AMALGAMATE OFF)
 
-# Boost config (only set manually if CMake fails to auto-detect)
-# You can comment these if not on macOS/Homebrew
-# set(BOOST_ROOT /opt/homebrew/opt/boost)
-# set(Boost_INCLUDE_DIR /opt/homebrew/include)
-# set(Boost_LIBRARY_DIR /opt/homebrew/lib)
+# Enable testing
+include(CTest)
+enable_testing()
+
+# ======================================
+# Fetch GoogleTest (GTest + GMock)
+# ======================================
+include(FetchContent)
+FetchContent_Declare(
+        GTest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG v1.14.0  # Use latest stable tag
+)
+FetchContent_MakeAvailable(GTest)
+
+# Add GTest test directory
+add_subdirectory(tests/gtests)
+################################
+# Catch2                       #
+################################
+FetchContent_Declare(
+        Catch2
+        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+        GIT_TAG        v3.5.2 # or latest stable tag
+)
+FetchContent_MakeAvailable(Catch2)
+
+add_subdirectory(tests)
 
 find_package(Boost REQUIRED COMPONENTS system thread)
 

@@ -2,6 +2,9 @@
 
 set -e  # Exit immediately on error
 
+echo "🧹 Clear the terminal"
+clear
+
 echo "🧹 Cleaning previous CMake cache and build files..."
 rm -rf CMakeCache.txt CMakeFiles Makefile cmake_install.cmake build
 
@@ -18,6 +21,11 @@ if ! make; then
     exit 1
 fi
 
+if ! ctest; then
+      echo "❌ Test cases failed!"]
+      exit 1
+fi
+
 if [ ! -f ./pubsub ]; then
   echo "❌ Build succeeded but pubsub binary not found!"
   exit 1
@@ -25,4 +33,3 @@ fi
 
 echo "🚀 Running Pub-Sub server..."
 ./pubsub
-

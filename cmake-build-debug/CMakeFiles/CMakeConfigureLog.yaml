@@ -372,3 +372,47 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "cmake-build-debug/_deps/catch2-src/CMake/CatchMiscFunctions.cmake:12 (check_cxx_compiler_flag)"
+      - "cmake-build-debug/_deps/catch2-src/CMake/CatchMiscFunctions.cmake:119 (add_cxx_flag_if_supported_to_targets)"
+      - "cmake-build-debug/_deps/catch2-src/src/CMakeLists.txt:352 (add_build_reproducibility_settings)"
+    checks:
+      - "Performing Test HAVE_FLAG__ffile_prefix_map__Users_ronak_Programming_CLion_Projects_Pub_Sub_System_cmake_build_debug__deps_catch2_src__"
+    directories:
+      source: "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mflbpV"
+      binary: "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mflbpV"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/_deps/catch2-src/extras;/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/_deps/catch2-src/CMake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "HAVE_FLAG__ffile_prefix_map__Users_ronak_Programming_CLion_Projects_Pub_Sub_System_cmake_build_debug__deps_catch2_src__"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mflbpV'
+        
+        Run Build Command(s): /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c8f72/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c8f72.dir/build.make CMakeFiles/cmTC_c8f72.dir/build
+        Building CXX object CMakeFiles/cmTC_c8f72.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_FLAG__ffile_prefix_map__Users_ronak_Programming_CLion_Projects_Pub_Sub_System_cmake_build_debug__deps_catch2_src__  -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk   -ffile-prefix-map=/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/_deps/catch2-src/= -MD -MT CMakeFiles/cmTC_c8f72.dir/src.cxx.o -MF CMakeFiles/cmTC_c8f72.dir/src.cxx.o.d -o CMakeFiles/cmTC_c8f72.dir/src.cxx.o -c "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mflbpV/src.cxx"
+        c++: error: no such file or directory: 'Projects/Pub-Sub-System/cmake-build-debug/_deps/catch2-src/='
+        c++: error: invalid argument '/Users/ronak/Programming/CLion' to -ffile-prefix-map=
+        c++: error: invalid argument '/Users/ronak/Programming/CLion' to -ffile-prefix-map=
+        c++: error: invalid argument '/Users/ronak/Programming/CLion' to -ffile-prefix-map=
+        make[2]: *** [CMakeFiles/cmTC_c8f72.dir/src.cxx.o] Error 1
+        make[1]: *** [cmTC_c8f72/fast] Error 2
+        
+      exitCode: 2
+...

@@ -31,3 +31,8 @@ void TopicManager::waitForMessages(const std::string& subscriberId, std::vector<
     out = std::move(messages[subscriberId]);
     messages[subscriberId].clear();
 }
+
+int TopicManager::getSubscriberCount(const std::string &topicId) {
+    std::unique_lock<std::mutex> lock(mtx);
+    return subscribers[topicId].size();
+}

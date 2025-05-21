@@ -39,6 +39,26 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/_deps/gtest-build/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/_deps/catch2-build/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/external/crow/cmake_install.cmake")
 endif()
 

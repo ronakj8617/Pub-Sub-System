@@ -13,7 +13,7 @@ public:
     void publish(const std::string& topicId, const std::string& message);
     std::vector<std::string> getMessage(const std::string& subscriberId);
     void waitForMessages(const std::string& subscriberId, std::vector<std::string>& out);
-
+    int getSubscriberCount(const std::string &topicId);
 private:
     std::unordered_map<std::string, std::vector<std::string>> subscribers;
     std::unordered_map<std::string, std::vector<std::string>> messages;
