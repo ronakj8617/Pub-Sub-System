@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['test_0',['TEST',['../gtest__topic__manager_8cpp.html#acfc2132428f73d114dfa2c027b730128',1,'TEST(TopicManagerTest, SubscribeAndPublish):&#160;gtest_topic_manager.cpp'],['../gtest__topic__manager_8cpp.html#adfcd22da61a2997fd937ab1737e4c3e7',1,'TEST(TopicManagerTest, SubscriberReceivesPublishedMessage):&#160;gtest_topic_manager.cpp'],['../gtest__topic__manager_8cpp.html#a3379cd779ce2becdeb2a0e1b9aa84a8e',1,'TEST(TopicManagerTest, MultipleSubscribersReceiveMessage):&#160;gtest_topic_manager.cpp'],['../gtest__topic__manager_8cpp.html#afed29684baaeb0a79dcaa21d9fcf31f3',1,'TEST(TopicManagerTest, NoSubscribersShouldNotCauseCrash):&#160;gtest_topic_manager.cpp']]],
+  ['test_5fcase_1',['TEST_CASE',['../test__main_8cpp.html#a257230ef1350b6ea4f03b9524526c17d',1,'TEST_CASE(&quot;TopicManager addSubscriber works&quot;, &quot;[topic]&quot;):&#160;test_main.cpp'],['../test__topic__manager_8cpp.html#a7e20f0b20b1558ae833a813d98e220d0',1,'TEST_CASE(&quot;TopicManager handles subscriptions and messages&quot;, &quot;[topic]&quot;):&#160;test_topic_manager.cpp']]]
+];

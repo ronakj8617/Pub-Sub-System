@@ -1,0 +1,44 @@
+\doxysection{Topic\+Manager.\+cpp}
+\hypertarget{_topic_manager_8cpp_source}{}\label{_topic_manager_8cpp_source}\index{src/TopicManager.cpp@{src/TopicManager.cpp}}
+\mbox{\hyperlink{_topic_manager_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ronak\ on\ 18/05/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_topic_manager_8h}{./../include/TopicManager.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_topic_manager_a9f834a9b077ce2e7c393846884956716}{TopicManager::subscribe}}(\textcolor{keyword}{const}\ std::string\&\ topicId,\ \textcolor{keyword}{const}\ std::string\&\ subscriberId)\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_topic_manager_abd6b3e55a15f629c262af4a1e9c7d370}{mtx}});}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_topic_manager_ac2c7dba4b82bfdbd2ea6bcff04fdd4a3}{subscribers}}[topicId].push\_back(subscriberId);}
+\DoxyCodeLine{00009\ \}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_topic_manager_a4a9860f07668c00784dfb92d578c66e9}{TopicManager::publish}}(\textcolor{keyword}{const}\ std::string\&\ topicId,\ \textcolor{keyword}{const}\ std::string\&\ message)\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_topic_manager_abd6b3e55a15f629c262af4a1e9c7d370}{mtx}});}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ sub\ :\ \mbox{\hyperlink{class_topic_manager_ac2c7dba4b82bfdbd2ea6bcff04fdd4a3}{subscribers}}[topicId])\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_topic_manager_a05045ea68476fccb085f1968551b3335}{messages}}[sub].push\_back(message);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_topic_manager_ae2d327cb0c432a33749ca26435403ac7}{conds}}[sub].notify\_all();}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ std::vector<std::string>\ \mbox{\hyperlink{class_topic_manager_a6652f2f1f0b8819ffd8a4ca08ea2c976}{TopicManager::getMessage}}(\textcolor{keyword}{const}\ std::string\&\ subscriberId)\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_topic_manager_abd6b3e55a15f629c262af4a1e9c7d370}{mtx}});}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{auto}\ msgs\ =\ \mbox{\hyperlink{class_topic_manager_a05045ea68476fccb085f1968551b3335}{messages}}[subscriberId];}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_topic_manager_a05045ea68476fccb085f1968551b3335}{messages}}[subscriberId].clear();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ msgs;}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_topic_manager_acb126cb99abeba6c28096cd1e2a25dc3}{TopicManager::waitForMessages}}(\textcolor{keyword}{const}\ std::string\&\ subscriberId,\ std::vector<std::string>\&\ out)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ std::unique\_lock<std::mutex>\ lock(\mbox{\hyperlink{class_topic_manager_abd6b3e55a15f629c262af4a1e9c7d370}{mtx}});}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_topic_manager_ae2d327cb0c432a33749ca26435403ac7}{conds}}[subscriberId].wait(lock,\ [\&]\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !\mbox{\hyperlink{class_topic_manager_a05045ea68476fccb085f1968551b3335}{messages}}[subscriberId].empty();}
+\DoxyCodeLine{00030\ \ \ \ \ \});}
+\DoxyCodeLine{00031\ \ \ \ \ out\ =\ std::move(\mbox{\hyperlink{class_topic_manager_a05045ea68476fccb085f1968551b3335}{messages}}[subscriberId]);}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_topic_manager_a05045ea68476fccb085f1968551b3335}{messages}}[subscriberId].clear();}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_topic_manager_adbe6976205cc8a10452ed554274b170f}{TopicManager::getSubscriberCount}}(\textcolor{keyword}{const}\ std::string\ \&topicId)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ std::unique\_lock<std::mutex>\ lock(\mbox{\hyperlink{class_topic_manager_abd6b3e55a15f629c262af4a1e9c7d370}{mtx}});}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_topic_manager_ac2c7dba4b82bfdbd2ea6bcff04fdd4a3}{subscribers}}[topicId].size();}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}

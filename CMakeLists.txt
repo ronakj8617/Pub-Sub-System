@@ -62,3 +62,20 @@ add_executable(pubsub
 
 # Link against Boost libraries
 target_link_libraries(pubsub PRIVATE ${Boost_LIBRARIES})
+
+# Doxygen Documentation setup
+find_package(Doxygen QUIET)
+
+if (DOXYGEN_FOUND)
+    set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile)
+    set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile.out)
+
+    add_custom_target(doc_doxygen
+            COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_IN}
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+            COMMENT "Generating API documentation with Doxygen"
+            VERBATIM
+    )
+else ()
+    message(STATUS "Doxygen not found, 'doc_doxygen' target will not be available")
+endif ()

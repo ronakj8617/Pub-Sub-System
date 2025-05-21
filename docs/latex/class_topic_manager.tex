@@ -1,0 +1,150 @@
+\doxysection{Topic\+Manager Class Reference}
+\hypertarget{class_topic_manager}{}\label{class_topic_manager}\index{TopicManager@{TopicManager}}
+
+
+{\ttfamily \#include $<$Topic\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_topic_manager_a9f834a9b077ce2e7c393846884956716}{subscribe}} (const std\+::string \&topic\+Id, const std\+::string \&subscriber\+Id)
+\begin{DoxyCompactList}\small\item\em Subscribes a callback to a topic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_topic_manager_a4a9860f07668c00784dfb92d578c66e9}{publish}} (const std\+::string \&topic\+Id, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Publishes a message to a specific topic. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_topic_manager_a6652f2f1f0b8819ffd8a4ca08ea2c976}{get\+Message}} (const std\+::string \&subscriber\+Id)
+\item 
+void \mbox{\hyperlink{class_topic_manager_acb126cb99abeba6c28096cd1e2a25dc3}{wait\+For\+Messages}} (const std\+::string \&subscriber\+Id, std\+::vector$<$ std\+::string $>$ \&out)
+\item 
+int \mbox{\hyperlink{class_topic_manager_adbe6976205cc8a10452ed554274b170f}{get\+Subscriber\+Count}} (const std\+::string \&topic\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{class_topic_manager_ac2c7dba4b82bfdbd2ea6bcff04fdd4a3}{subscribers}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{class_topic_manager_a05045ea68476fccb085f1968551b3335}{messages}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::condition\+\_\+variable $>$ \mbox{\hyperlink{class_topic_manager_ae2d327cb0c432a33749ca26435403ac7}{conds}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_topic_manager_abd6b3e55a15f629c262af4a1e9c7d370}{mtx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_topic_manager_a6652f2f1f0b8819ffd8a4ca08ea2c976}\index{TopicManager@{TopicManager}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily \label{class_topic_manager_a6652f2f1f0b8819ffd8a4ca08ea2c976} 
+std\+::vector$<$ std\+::string $>$ Topic\+Manager\+::get\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{subscriber\+Id}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_topic_manager_a6652f2f1f0b8819ffd8a4ca08ea2c976_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_topic_manager_adbe6976205cc8a10452ed554274b170f}\index{TopicManager@{TopicManager}!getSubscriberCount@{getSubscriberCount}}
+\index{getSubscriberCount@{getSubscriberCount}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{getSubscriberCount()}{getSubscriberCount()}}
+{\footnotesize\ttfamily \label{class_topic_manager_adbe6976205cc8a10452ed554274b170f} 
+int Topic\+Manager\+::get\+Subscriber\+Count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic\+Id}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_topic_manager_adbe6976205cc8a10452ed554274b170f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_topic_manager_a4a9860f07668c00784dfb92d578c66e9}\index{TopicManager@{TopicManager}!publish@{publish}}
+\index{publish@{publish}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily \label{class_topic_manager_a4a9860f07668c00784dfb92d578c66e9} 
+void Topic\+Manager\+::publish (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic\+Id}{, }\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Publishes a message to a specific topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic name. \\
+\hline
+{\em message} & The message to be sent. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_topic_manager_a4a9860f07668c00784dfb92d578c66e9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_topic_manager_a9f834a9b077ce2e7c393846884956716}\index{TopicManager@{TopicManager}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
+{\footnotesize\ttfamily \label{class_topic_manager_a9f834a9b077ce2e7c393846884956716} 
+void Topic\+Manager\+::subscribe (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic\+Id}{, }\item[{const std\+::string \&}]{subscriber\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes a callback to a topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic name. \\
+\hline
+{\em callback} & A function that handles incoming messages. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_topic_manager_a9f834a9b077ce2e7c393846884956716_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_topic_manager_acb126cb99abeba6c28096cd1e2a25dc3}\index{TopicManager@{TopicManager}!waitForMessages@{waitForMessages}}
+\index{waitForMessages@{waitForMessages}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{waitForMessages()}{waitForMessages()}}
+{\footnotesize\ttfamily \label{class_topic_manager_acb126cb99abeba6c28096cd1e2a25dc3} 
+void Topic\+Manager\+::wait\+For\+Messages (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{subscriber\+Id}{, }\item[{std\+::vector$<$ std\+::string $>$ \&}]{out}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_topic_manager_ae2d327cb0c432a33749ca26435403ac7}\index{TopicManager@{TopicManager}!conds@{conds}}
+\index{conds@{conds}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{conds}{conds}}
+{\footnotesize\ttfamily \label{class_topic_manager_ae2d327cb0c432a33749ca26435403ac7} 
+std\+::unordered\+\_\+map$<$std\+::string, std\+::condition\+\_\+variable$>$ Topic\+Manager\+::conds\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_topic_manager_a05045ea68476fccb085f1968551b3335}\index{TopicManager@{TopicManager}!messages@{messages}}
+\index{messages@{messages}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{messages}{messages}}
+{\footnotesize\ttfamily \label{class_topic_manager_a05045ea68476fccb085f1968551b3335} 
+std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$std\+::string$>$ $>$ Topic\+Manager\+::messages\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_topic_manager_abd6b3e55a15f629c262af4a1e9c7d370}\index{TopicManager@{TopicManager}!mtx@{mtx}}
+\index{mtx@{mtx}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{mtx}{mtx}}
+{\footnotesize\ttfamily \label{class_topic_manager_abd6b3e55a15f629c262af4a1e9c7d370} 
+std\+::mutex Topic\+Manager\+::mtx\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_topic_manager_ac2c7dba4b82bfdbd2ea6bcff04fdd4a3}\index{TopicManager@{TopicManager}!subscribers@{subscribers}}
+\index{subscribers@{subscribers}!TopicManager@{TopicManager}}
+\doxysubsubsection{\texorpdfstring{subscribers}{subscribers}}
+{\footnotesize\ttfamily \label{class_topic_manager_ac2c7dba4b82bfdbd2ea6bcff04fdd4a3} 
+std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$std\+::string$>$ $>$ Topic\+Manager\+::subscribers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_topic_manager_8h}{Topic\+Manager.\+h}}\item 
+src/\mbox{\hyperlink{_topic_manager_8cpp}{Topic\+Manager.\+cpp}}\end{DoxyCompactItemize}

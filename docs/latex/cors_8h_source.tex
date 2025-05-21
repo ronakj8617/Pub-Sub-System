@@ -1,0 +1,31 @@
+\doxysection{cors.\+h}
+\hypertarget{cors_8h_source}{}\label{cors_8h_source}\index{include/cors.h@{include/cors.h}}
+\mbox{\hyperlink{cors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ronak\ on\ 19/05/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}crow.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_o_r_s}{CORS}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_o_r_s_1_1context}{context}}\ \{\};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_c_o_r_s_a58dc6a14b73c3187118b3d261ad37bf3}{before\_handle}}(crow::request\&\ req,\ crow::response\&\ res,\ \mbox{\hyperlink{struct_c_o_r_s_1_1context}{context}}\&)\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ res.add\_header(\textcolor{stringliteral}{"{}Access-\/Control-\/Allow-\/Origin"{}},\ \textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ res.add\_header(\textcolor{stringliteral}{"{}Access-\/Control-\/Allow-\/Methods"{}},\ \textcolor{stringliteral}{"{}GET,\ POST,\ OPTIONS"{}});}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ res.add\_header(\textcolor{stringliteral}{"{}Access-\/Control-\/Allow-\/Headers"{}},\ \textcolor{stringliteral}{"{}Content-\/Type"{}});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (req.method\ ==\ \textcolor{stringliteral}{"{}OPTIONS"{}}\_method)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ res.code\ =\ 204;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ res.end();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_c_o_r_s_aac53c59ded44fb923ae3d681d21d2144}{after\_handle}}(crow::request\&,\ crow::response\&\ res,\ \mbox{\hyperlink{struct_c_o_r_s_1_1context}{context}}\&)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ res.add\_header(\textcolor{stringliteral}{"{}Access-\/Control-\/Allow-\/Origin"{}},\ \textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

@@ -33,7 +33,9 @@ test_detail.xml
 *.dll
 *.exe
 
+
 # IDE & Editor specific files
+/.idea/
 .vscode/
 .idea/
 *.swp
