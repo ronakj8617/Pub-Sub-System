@@ -100,22 +100,38 @@ tests/gtests/CMakeFiles/gtests.dir/gtest_topic_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gtests.dir/gtest_topic_manager.cpp.s"
 	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/tests/gtests/gtest_topic_manager.cpp" -o CMakeFiles/gtests.dir/gtest_topic_manager.cpp.s
 
+tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o: tests/gtests/CMakeFiles/gtests.dir/flags.make
+tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o: /Users/ronak/Programming/CLion\ Projects/Pub-Sub-System/src/TopicManager.cpp
+tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o: tests/gtests/CMakeFiles/gtests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o"
+	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o -MF CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o.d -o CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o -c "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/src/TopicManager.cpp"
+
+tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.i"
+	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/src/TopicManager.cpp" > CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.i
+
+tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.s"
+	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/src/TopicManager.cpp" -o CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.s
+
 # Object files for target gtests
 gtests_OBJECTS = \
 "CMakeFiles/gtests.dir/gtest_main.cpp.o" \
-"CMakeFiles/gtests.dir/gtest_topic_manager.cpp.o"
+"CMakeFiles/gtests.dir/gtest_topic_manager.cpp.o" \
+"CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o"
 
 # External object files for target gtests
 gtests_EXTERNAL_OBJECTS =
 
 tests/gtests/gtests: tests/gtests/CMakeFiles/gtests.dir/gtest_main.cpp.o
 tests/gtests/gtests: tests/gtests/CMakeFiles/gtests.dir/gtest_topic_manager.cpp.o
+tests/gtests/gtests: tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o
 tests/gtests/gtests: tests/gtests/CMakeFiles/gtests.dir/build.make
 tests/gtests/gtests: lib/libgtest.a
 tests/gtests/gtests: lib/libgtest_main.a
 tests/gtests/gtests: lib/libgtest.a
 tests/gtests/gtests: tests/gtests/CMakeFiles/gtests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable gtests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable gtests"
 	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtests.dir/link.txt --verbose=$(VERBOSE)
 	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests" && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -D TEST_TARGET=gtests -D "TEST_EXECUTABLE=/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests/gtests" -D TEST_EXECUTOR= -D "TEST_WORKING_DIR=/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests" -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=gtests_TESTS -D "CTEST_FILE=/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/gtests/gtests[1]_tests.cmake" -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/GoogleTestAddTests.cmake
 

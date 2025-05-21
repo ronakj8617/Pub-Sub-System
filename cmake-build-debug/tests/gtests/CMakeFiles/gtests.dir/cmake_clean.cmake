@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o"
+  "CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o.d"
   "CMakeFiles/gtests.dir/gtest_main.cpp.o"
   "CMakeFiles/gtests.dir/gtest_main.cpp.o.d"
   "CMakeFiles/gtests.dir/gtest_topic_manager.cpp.o"

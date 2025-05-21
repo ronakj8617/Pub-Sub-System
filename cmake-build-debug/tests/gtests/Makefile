@@ -205,6 +205,30 @@ gtests/fast:
 	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/gtests/CMakeFiles/gtests.dir/build.make tests/gtests/CMakeFiles/gtests.dir/build
 .PHONY : gtests/fast
 
+__/__/src/TopicManager.o: __/__/src/TopicManager.cpp.o
+.PHONY : __/__/src/TopicManager.o
+
+# target to build an object file
+__/__/src/TopicManager.cpp.o:
+	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/gtests/CMakeFiles/gtests.dir/build.make tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.o
+.PHONY : __/__/src/TopicManager.cpp.o
+
+__/__/src/TopicManager.i: __/__/src/TopicManager.cpp.i
+.PHONY : __/__/src/TopicManager.i
+
+# target to preprocess a source file
+__/__/src/TopicManager.cpp.i:
+	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/gtests/CMakeFiles/gtests.dir/build.make tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.i
+.PHONY : __/__/src/TopicManager.cpp.i
+
+__/__/src/TopicManager.s: __/__/src/TopicManager.cpp.s
+.PHONY : __/__/src/TopicManager.s
+
+# target to generate assembly for a file
+__/__/src/TopicManager.cpp.s:
+	cd "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/gtests/CMakeFiles/gtests.dir/build.make tests/gtests/CMakeFiles/gtests.dir/__/__/src/TopicManager.cpp.s
+.PHONY : __/__/src/TopicManager.cpp.s
+
 gtest_main.o: gtest_main.cpp.o
 .PHONY : gtest_main.o
 
@@ -269,6 +293,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... gtests"
+	@echo "... __/__/src/TopicManager.o"
+	@echo "... __/__/src/TopicManager.i"
+	@echo "... __/__/src/TopicManager.s"
 	@echo "... gtest_main.o"
 	@echo "... gtest_main.i"
 	@echo "... gtest_main.s"

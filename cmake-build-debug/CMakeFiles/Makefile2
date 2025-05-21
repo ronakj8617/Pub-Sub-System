@@ -1224,7 +1224,7 @@ CMakeFiles/pubsub.dir/clean:
 _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/gtest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=87,88 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=86,87 "Built target gmock"
 .PHONY : _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1241,7 +1241,7 @@ gmock: _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/rule
 # codegen rule for target.
 _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=87,88 "Finished codegen for target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=86,87 "Finished codegen for target gmock"
 .PHONY : _deps/gtest-build/googlemock/CMakeFiles/gmock.dir/codegen
 
 # clean rule for target.
@@ -1257,7 +1257,7 @@ _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/gtest-build/go
 _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/gtest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=89 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=88 "Built target gmock_main"
 .PHONY : _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1274,7 +1274,7 @@ gmock_main: _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 # codegen rule for target.
 _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=89 "Finished codegen for target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=88 "Finished codegen for target gmock_main"
 .PHONY : _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
 
 # clean rule for target.
@@ -1289,7 +1289,7 @@ _deps/gtest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/gtest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/gtest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/gtest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=90,91 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=89,90 "Built target gtest"
 .PHONY : _deps/gtest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1306,7 +1306,7 @@ gtest: _deps/gtest-build/googletest/CMakeFiles/gtest.dir/rule
 # codegen rule for target.
 _deps/gtest-build/googletest/CMakeFiles/gtest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/gtest-build/googletest/CMakeFiles/gtest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=90,91 "Finished codegen for target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=89,90 "Finished codegen for target gtest"
 .PHONY : _deps/gtest-build/googletest/CMakeFiles/gtest.dir/codegen
 
 # clean rule for target.
@@ -1321,12 +1321,12 @@ _deps/gtest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/gtest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=92 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=91,92 "Built target gtest_main"
 .PHONY : _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 0
 .PHONY : _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/rule
@@ -1338,7 +1338,7 @@ gtest_main: _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/rule
 # codegen rule for target.
 _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=92 "Finished codegen for target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=91,92 "Finished codegen for target gtest_main"
 .PHONY : _deps/gtest-build/googletest/CMakeFiles/gtest_main.dir/codegen
 
 # clean rule for target.
@@ -1359,7 +1359,7 @@ tests/gtests/CMakeFiles/gtests.dir/all: _deps/gtest-build/googletest/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 tests/gtests/CMakeFiles/gtests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/gtests/CMakeFiles/gtests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 0
 .PHONY : tests/gtests/CMakeFiles/gtests.dir/rule
@@ -1418,12 +1418,12 @@ _deps/catch2-build/src/CMakeFiles/Catch2.dir/clean:
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=85,86 "Built target Catch2WithMain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=85 "Built target Catch2WithMain"
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 86
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 85
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 0
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/rule
@@ -1435,7 +1435,7 @@ Catch2WithMain: _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/rule
 # codegen rule for target.
 _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=85,86 "Finished codegen for target Catch2WithMain"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" --progress-num=85 "Finished codegen for target Catch2WithMain"
 .PHONY : _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/codegen
 
 # clean rule for target.
@@ -1456,7 +1456,7 @@ tests/CMakeFiles/tests.dir/all: _deps/catch2-build/src/CMakeFiles/Catch2WithMain
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 89
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 88
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/CMakeFiles" 0
 .PHONY : tests/CMakeFiles/tests.dir/rule

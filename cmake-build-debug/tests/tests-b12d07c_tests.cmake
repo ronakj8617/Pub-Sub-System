@@ -1,0 +1,5 @@
+add_test( [==[TopicManager addSubscriber works]==] [==[/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/tests]==] [==[TopicManager addSubscriber works]==]  )
+set_tests_properties( [==[TopicManager addSubscriber works]==] PROPERTIES WORKING_DIRECTORY [==[/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests]==])
+add_test( [==[TopicManager handles subscriptions and messages]==] [==[/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests/tests]==] [==[TopicManager handles subscriptions and messages]==]  )
+set_tests_properties( [==[TopicManager handles subscriptions and messages]==] PROPERTIES WORKING_DIRECTORY [==[/Users/ronak/Programming/CLion Projects/Pub-Sub-System/cmake-build-debug/tests]==])
+set( tests_TESTS [==[TopicManager addSubscriber works]==] [==[TopicManager handles subscriptions and messages]==])

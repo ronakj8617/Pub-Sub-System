@@ -18,3 +18,5 @@ target_include_directories(gtests PRIVATE
 # Register tests with CTest
 include(GoogleTest)
 gtest_discover_tests(gtests)
+
+add_test(NAME gtests COMMAND gtests --gtest_output=xml:${CMAKE_BINARY_DIR}/gtest_report.xml)
