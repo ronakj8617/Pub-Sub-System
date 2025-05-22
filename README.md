@@ -1,6 +1,6 @@
 # 🛰️ Pub-Sub Server in Modern C++
 
-A lightweight, multithreaded Publish–Subscribe (Pub-Sub) server built in modern C++ using [Crow](https://github.com/CrowCpp/crow), [Boost.Asio](https://www.boost.org/doc/libs/1_82_0/doc/html/boost_asio.html), and CMake.
+A lightweight, multithreaded Publish–Subscribe (Pub-Sub) server built in modern C++ using [Crow](https://github.com/CrowCpp/crow), [Boost.Asio](https://www.boost.org/doc/libs/1_82_0/doc/html/boost_asio.html), Crow, GoogleTest, Catch2, Doxygen, and CMake.
 
 > Think of this as a minimal in-memory message broker to understand the internals of Pub-Sub systems like Kafka, but built with C++ and web-ready REST endpoints.
 
