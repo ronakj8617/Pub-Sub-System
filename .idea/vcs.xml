@@ -6,6 +6,5 @@
     <mapping directory="$PROJECT_DIR$/external/Catch2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/external/crow" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/external/json" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/googletest" vcs="Git" />
   </component>
 </project>

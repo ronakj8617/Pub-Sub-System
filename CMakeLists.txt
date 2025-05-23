@@ -51,7 +51,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Catch2)
 
-add_subdirectory(tests)
+add_subdirectory(tests/catch2)
 
 # Find Boost
 find_package(Boost REQUIRED COMPONENTS system thread)

@@ -4,7 +4,7 @@
 
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_all.hpp>
-#include "./../include/TopicManager.h"
+#include "../../include/TopicManager.h"
 
 TEST_CASE("TopicManager addSubscriber works", "[topic]") {
     TopicManager tm;

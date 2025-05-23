@@ -3,7 +3,7 @@
 //
 
 #include <catch2/catch_test_macros.hpp>
-#include "./../src/TopicManager.cpp"
+#include "../../src/TopicManager.cpp"
 
 
 TEST_CASE("TopicManager handles subscriptions and messages", "[topic]") {
