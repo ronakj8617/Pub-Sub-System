@@ -40,6 +40,7 @@ A lightweight, multithreaded Publish–Subscribe (Pub-Sub) server built in moder
 ```bash
 sudo apt update
 sudo apt install -y g++ cmake libboost-all-dev
+```
 
 ---
 #### 📥 Clone the Repository
