@@ -1,19 +1,28 @@
 # 🛰️ Pub-Sub Server in Modern C++
 
-A lightweight, multithreaded Publish–Subscribe (Pub-Sub) server built in modern C++ using [Crow](https://github.com/CrowCpp/crow), [Boost.Asio](https://www.boost.org/doc/libs/1_82_0/doc/html/boost_asio.html), [GoogleTest](https://github.com/google/googletest), [Catch2](https://github.com/catchorg/Catch2), [Doxygen](https://www.doxygen.nl/), and [CMake](https://cmake.org/).
+A lightweight, multithreaded Publish–Subscribe (Pub-Sub) server built in modern C++ using:
 
-> Think of this as a minimal in-memory message broker to understand the internals of Pub-Sub systems like Kafka, but built with C++ and web-ready REST endpoints.
+- [Crow](https://github.com/CrowCpp/crow) – Flask-like C++ web framework
+- [Boost.Asio](https://www.boost.org/doc/libs/1_82_0/doc/html/boost_asio.html) – for asynchronous networking
+- [GoogleTest](https://github.com/google/googletest) – unit testing
+- [Catch2](https://github.com/catchorg/Catch2) – behavior-driven testing
+- [Doxygen](https://www.doxygen.nl/) – auto-generated documentation
+- [CMake](https://cmake.org/) – modern build system
+
+> ⚙️ A minimal, in-memory message broker to understand Pub-Sub internals like Kafka, built with modern C++ and RESTful APIs.
 
 ---
 
 ## 📌 Features
 
-- 🧵 Thread-safe Topic Management
-- 🔔 Real-time Message Publishing and Subscribing
-- 🌐 RESTful API with Crow (Flask-like C++ web framework)
-- ⚡ Boost.Asio-powered async networking
-- 🛠️ Clean and modular CMake-based build
-- 🔁 GitLab CI/CD ready
+- 🧵 **Thread-safe Topic Management**
+- 🔔 **Real-time Message Publishing and Subscribing**
+- 🌐 **RESTful API with Crow**
+- ⚡ **Async Networking with Boost.Asio**
+- 🧪 **Unit & BDD Testing with GoogleTest and Catch2**
+- 📚 **Doxygen-based API Documentation**
+- 🛠️ **Modular CMake Build**
+- 🔁 **CI/CD Ready (e.g., GitLab)**
 
 ---
 
@@ -32,7 +41,6 @@ A lightweight, multithreaded Publish–Subscribe (Pub-Sub) server built in moder
 sudo apt update
 sudo apt install -y g++ cmake libboost-all-dev
 
-```
 ---
 #### 📥 Clone the Repository
 ```
@@ -48,8 +56,20 @@ mkdir -p build
 cd build
 cmake ..
 make
+```
+
+# 🧪 Running Tests
+```bash
+    ctest
+```
+
+# 📚 Generate Documentation
+```bash
+    cmake --build . --target doc_doxygen
+```
 
 # Run the server
+```bash
 ./pubsub
 ```
 
@@ -70,14 +90,19 @@ make
 ``` graphql
 Pub-Sub-System/
 ├── src/
-│   ├── main.cpp              # Crow web server and endpoint handlers
-│   └── TopicManager.cpp      # Core Pub-Sub logic
+│   ├── main.cpp              # Crow server & routing
+│   └── TopicManager.cpp      # Topic-based pub-sub logic
 ├── include/
-│   └── cors.h                # Cross-Origin Resource Sharing setup
+│   └── cors.h                # CORS setup for REST API
 ├── external/
-│   └── crow/                 # Crow web framework (cloned from GitHub)
-├── CMakeLists.txt            # CMake build configuration
-├── publish.html              # Optional frontend UI for testing
+│   ├── crow/                 # Crow web framework
+│   └── ...                   # Other dependencies (e.g., Catch2)
+├── tests/
+│   ├── gtests/               # GoogleTest unit tests
+│   └── catch2/               # Catch2-based specs
+├── CMakeLists.txt            # Build configuration
+├── publish.html              # Optional frontend UI
+├── Doxyfile                  # Doxygen config
 └── README.md
 
 ```
