@@ -1,6 +1,6 @@
 # 🛰️ Pub-Sub Server in Modern C++
 
-A lightweight, multithreaded Publish–Subscribe (Pub-Sub) server built in modern C++ using:
+A multithreaded Publish–Subscribe (Pub-Sub) server built in modern C++ using:
 
 - [Crow](https://github.com/CrowCpp/crow) – Flask-like C++ web framework
 - [Boost.Asio](https://www.boost.org/doc/libs/1_82_0/doc/html/boost_asio.html) – for asynchronous networking
